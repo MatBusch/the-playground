@@ -5,21 +5,14 @@ This is a starter template for building a SaaS application using **Next.js** wit
 **Demo: [https://next-saas-start.vercel.app/](https://next-saas-start.vercel.app/)**
 
 <details>
-  <summary>Why did I make this?</summary>
-  
-  In 2020, I made a course called "React 2025" which showed how to build a SaaS application with Next.js, Stripe, and other tools.
+  <summary>The Playground</summary>
+  This is derived from the great Lee Robinson's Tutorial template showing of Next 15 within common SaaS patterns and tooling. 
+  I picked it up mainly to look at the Vercel Postgres/neon functionality.
 
-Well, it's almost 2025 and React 19 has brought so many amazing new features I didn't predict! This repo is a demonstration of the latest React and Next.js patterns. These patterns can drastically simplify some common tasks in building your SaaS, like building forms, talking to your database, and more.
-
-For example, React now has built in hooks like `useActionState` to handle inline form errors and pending states. React Server Actions can replace a lot of boilerplate code needed to call an API Route from the client-side. And finally, the React `use` hook combined with Next.js makes it incredibly easy to build a powerful `useUser()` hook.
-
-We're able to fetch the user from our Postgres database in the root layout, but _not_ await the `Promise`. Instead, we forward the `Promise` to a React context provider, where we can "unwrap" it and awaited the streamed in data. This means we can have the best of both worlds: easy code to fetch data from our database (e.g. `getUser()`) and a React hook we can use in Client Components (e.g. `useUser()`).
-
-Fun fact: the majority of the UI for this application was built with [v0](https://v0.dev) 🤯 [More details here](https://x.com/leeerob/status/1835777934361084316) if you want to learn about this repo.
-
+The Vercel deployment this is pointing to is intentionally not working as I didn't want to have people be able to load the site yet until I put my own auth in front.
 </details>
 
-## Features
+## Template Features
 
 - Marketing landing page (`/`) with animated Terminal element
 - Pricing page (`/pricing`) which connects to Stripe Checkout
@@ -42,8 +35,6 @@ Fun fact: the majority of the UI for this application was built with [v0](https:
 ## Getting Started
 
 ```bash
-git clone https://github.com/leerob/next-saas-starter
-cd next-saas-starter
 pnpm install
 ```
 
@@ -116,11 +107,3 @@ In your Vercel project settings (or during deployment), add all the necessary en
 3. `STRIPE_WEBHOOK_SECRET`: Use the webhook secret from the production webhook you created in step 1.
 4. `POSTGRES_URL`: Set this to your production database URL.
 5. `AUTH_SECRET`: Set this to a random string. `openssl rand -base64 32` will generate one.
-
-## Other Templates
-
-While this template is intentionally minimal and to be used as a learning resource, there are other paid versions in the community which are more full-featured:
-
-- https://achromatic.dev
-- https://shipfa.st
-- https://makerkit.dev
