@@ -1,16 +1,9 @@
-# Next.js SaaS Starter
+# The Playground
 
-This is a starter template for building a SaaS application using **Next.js** with support for authentication, Stripe integration for payments, and a dashboard for logged-in users.
-
-**Demo: [https://next-saas-start.vercel.app/](https://next-saas-start.vercel.app/)**
-
-<details>
-  <summary>The Playground</summary>
-  This is derived from the great Lee Robinson's Tutorial template showing of Next 15 within common SaaS patterns and tooling. 
-  I picked it up mainly to look at the Vercel Postgres/neon functionality.
+ This is derived from the great Lee Robinson's Tutorial template showing of Next 15 within common SaaS patterns and tooling. 
+ I picked it up mainly to look at the Vercel Postgres/neon functionality.
 
 The Vercel deployment this is pointing to is intentionally not working as I didn't want to have people be able to load the site yet until I put my own auth in front.
-</details>
 
 ## Template Features
 
